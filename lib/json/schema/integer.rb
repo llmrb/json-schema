@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class JSON::Schema
-  class Number < Leaf
+  class Integer < Leaf
     def min(i)
       tap { @minimum = i }
     end
@@ -12,7 +12,7 @@ class JSON::Schema
 
     def to_h
       super.merge!({
-        type: "number",
+        type: "integer",
         minimum: @minimum,
         maximum: @maximum
       }).compact

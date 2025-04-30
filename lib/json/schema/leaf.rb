@@ -1,30 +1,67 @@
 # frozen_string_literal: true
 
 class JSON::Schema
+  ##
+  # The {JSON::Schema::Leaf JSON::Schema::Leaf} class is the
+  # superclass of all values that can appear in a JSON schema.
+  # See the instance methods of {JSON::Schema JSON::Schema} for
+  # an example of how to create instances of {JSON::Schema::Leaf JSON::Schema::Leaf}
+  # through its subclasses.
   class Leaf
-    def initialize(description: nil, default: nil, enum: nil, required: false)
-      @description = description
-      @default = default
-      @required = required
-      @enum = enum
+    def initialize
+      @description = nil
+      @default = nil
+      @enum = nil
+      @required = nil
     end
 
+    ##
+    # Set the description of a leaf
+    # @param [String] str The description
+    # @return [JSON::Schema::Leaf]
+    def description(str)
+      tap { @description = str }
+    end
+
+    ##
+    # Set the default value of a leaf
+    # @param [Object] value The default value
+    # @return [JSON::Schema::Leaf]
+    def default(value)
+      tap { @default = value }
+    end
+
+    ##
+    # Set the allowed values of a leaf
+    # @param [Array] values The allowed values
+    # @return [JSON::Schema::Leaf]
+    def enum(*values)
+      tap { @enum = values }
+    end
+
+    ##
+    # Denote a leaf as required
+    # @return [JSON::Schema::Leaf]
+    def required
+      tap { @required = true }
+    end
+
+    ##
+    # @return [Hash]
     def to_h
-      {description:, default:, enum:}.compact
+      {description: @description, default: @default, enum: @enum}.compact
     end
 
+    ##
+    # @return [String]
     def to_json(options = {})
       to_h.to_json(options)
     end
 
+    ##
+    # @return [Boolean]
     def required?
       @required
     end
-
-    private
-
-    attr_reader :description
-    attr_reader :default
-    attr_reader :required
   end
 end
