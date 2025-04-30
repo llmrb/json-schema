@@ -20,6 +20,7 @@ some have a range of values:
 
 ```ruby
 #!/usr/bin/env ruby
+require "json"
 require "json/schema"
 
 schema = JSON::Schema.new
@@ -28,6 +29,8 @@ schema.object({
   age: schema.number.default(18),
   salary: schema.number.min(65_000).max(120_000)
 })
+
+print JSON.pretty_generate(schema.to_h), "\n"
 ```
 
 ### Array
@@ -39,6 +42,7 @@ of objects with the same properties, and it also allows the array to include
 
 ```ruby
 #!/usr/bin/env ruby
+require "json"
 require "json/schema"
 
 schema = JSON::Schema.new
@@ -50,6 +54,8 @@ schema.array(
   }),
   schema.null
 )
+
+print JSON.pretty_generate(schema.to_h), "\n"
 ```
 
 ## API reference
