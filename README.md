@@ -7,9 +7,7 @@ through the composition of simple Ruby objects. It is an (optional
 dependency) of
 [llmrb/llm](https://github.com/llmrb/llm)
 where it is used to describe the response a Large Language Model
-(LLM) is expected to produce. Please note that this library is
-focused on producing a schema, and not validating a schema. For
-validation, see [voxpupuli/json-schema](https://github.com/voxpupuli/json-schema/).
+(LLM) is expected to produce.
 
 ## Examples
 
@@ -63,7 +61,7 @@ over or doesn't cover at all. The API reference is available at
 
 ## Install
 
-[llmrb/json_schema](https://github.com/llmrb/json_schema) is available
+[llmrb/json-schema](https://github.com/llmrb/json-schema) is available
 via [RubyGems](https://rubygems.org/gems/json-schema)
 
 	gem install llmrb-json_schema
