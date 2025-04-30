@@ -59,6 +59,11 @@ else there's the API reference. It covers classes and methods that the README gl
 over or doesn't cover at all. The API reference is available at
 [0x1eef.github.io/x/llmrb-json_schema](https://0x1eef.github.io/x/llmrb-json_schema).
 
+## See also
+
+* [JSON Schema: official website](https://json-schema.org/)
+* [JSON Schema: interactive tour](https://tour.json-schema.org/)
+
 ## Install
 
 [llmrb/json-schema](https://github.com/llmrb/json-schema) is available
