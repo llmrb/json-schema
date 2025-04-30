@@ -21,6 +21,7 @@ end unless defined?(JSON)
 #    address: schema.object({street: schema.string}).required,
 #  })
 class JSON::Schema
+  require_relative "schema/version"
   require_relative "schema/leaf"
   require_relative "schema/object"
   require_relative "schema/array"

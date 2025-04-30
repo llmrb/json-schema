@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/llm/version"
+require_relative "lib/json/schema/version"
 
 Gem::Specification.new do |spec|
   spec.name = "llmrb-json_schema"
-  spec.version = LLM::VERSION
+  spec.version = JSON::Schema::VERSION
   spec.authors = ["Antar Azri", "0x1eef"]
   spec.email = ["azantar@proton.me", "0x1eef@proton.me"]
 
