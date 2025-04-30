@@ -3,8 +3,8 @@
 [llmrb/json-schema](https://github.com/llmrb/json-schema)
 is a small, dependency-free library that can produce a
 [JSON Schema](https://json-schema.org/overview/what-is-jsonschema)
-through the composition of simple Ruby objects. It is an (optional
-dependency) of
+through the composition of simple Ruby objects. It is an optional
+dependency of
 [llmrb/llm](https://github.com/llmrb/llm)
 where it is used to describe the response a Large Language Model
 (LLM) is expected to produce.
