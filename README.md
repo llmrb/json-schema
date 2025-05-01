@@ -1,6 +1,6 @@
 ## About
 
-[llmrb/json-schema](https://github.com/llmrb/json-schema)
+[llmrb-json_schema](https://github.com/llmrb/json-schema)
 is a small, dependency-free library that can produce a
 [JSON Schema](https://json-schema.org/overview/what-is-jsonschema)
 through the composition of simple Ruby objects. It is an optional
@@ -72,8 +72,8 @@ over or doesn't cover at all. The API reference is available at
 
 ## Install
 
-[llmrb/json-schema](https://github.com/llmrb/json-schema) is available
-via [RubyGems](https://rubygems.org/gems/json-schema)
+[llmrb-json_schema](https://github.com/llmrb/json-schema) is available
+via [RubyGems](https://rubygems.org/gems/llmrb-json_schema)
 
 	gem install llmrb-json_schema
 
