@@ -43,8 +43,8 @@ class JSON::Schema
   # Returns an array
   # @param [Array] items An array of items
   # @return [JSON::Schema::Array]
-  def array(items)
-    Array.new(items)
+  def array(*items)
+    Array.new(*items)
   end
 
   ##
