@@ -13,9 +13,9 @@ RSpec.describe JSON::Schema do
 
       let(:object) do
         schema.object(
-          name: schema.string.required,
+          name: schema.string.required.min(2).max(10),
           age: schema.integer.min(18).max(65),
-          toes: schema.integer.min(0).max(10).multiple_of(2),
+          toes: schema.integer.min(0).max(10).multiple_of(2)
         )
       end
 
@@ -24,7 +24,9 @@ RSpec.describe JSON::Schema do
           "type" => "object",
           "properties" => {
             "name" => {
-              "type" => "string"
+              "type" => "string",
+              "minLength" => 2,
+              "maxLength" => 10
             },
             "age" => {
               "type" => "integer",

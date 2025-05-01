@@ -58,6 +58,29 @@ schema.array(
 print JSON.pretty_generate(schema.to_h), "\n"
 ```
 
+### Constraints
+
+Generally each JSON value can have certain constraints, such as a minimum or
+maximum value, whether or not it is a required item in an object, or has a
+default value. We have seen some of these in the previous examples. The following
+example demonstrates a few more. See the
+[API reference](https://0x1eef.github.io/x/llmrb-json_schema)
+for a complete list of constraints on a per-value basis:
+
+```ruby
+#!/usr/bin/env ruby
+require "json"
+require "json/schema"
+
+schema = JSON::Schema.new
+schema.object({
+  name: schema.string.required,
+  age: schema.number.default(18),
+  salary: schema.number.min(65_000).max(120_000).multiple_of(5_000),
+  is_employee: schema.boolean.default(true)
+})
+```
+
 ## API reference
 
 The README tries to provide a high-level overview of the library. For everything
