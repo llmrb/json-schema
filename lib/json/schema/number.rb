@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class JSON::Schema
+  ##
+  # The {JSON::Schema::Number JSON::Schema::Number} class represents a
+  # a number (either whole or decimal) value in a JSON schema. It is a
+  # subclass of {JSON::Schema::Leaf JSON::Schema::Leaf} and provides
+  # methods that can act as constraints.
   class Number < Leaf
     ##
     # Constrain the number to a minimum value
